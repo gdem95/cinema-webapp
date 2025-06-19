@@ -304,6 +304,8 @@ Il login fallisce e viene mostrato l'errore "Credenziali non valide".
 
 - Apache Tika: immagine locandina troppo grande (maggiore di 5 MB)
 
+![](./images/img5MB.jpg)
+
 ![](./images/tika_size.jpg)
 
 - Testo HTML nel campo 'descrizione' (attacco stored XSS)

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Cinema - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-dark text-light">
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/home"><i class="bi bi-camera-reels-fill"></i> <strong>Cinema</strong></a>
+    </div>
+  </nav>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+		<div th:if="${error}" class="alert alert-danger mt-3" th:utext="${error}"></div>
+		<div th:if="${msg}" class="alert alert-success mt-3" th:utext="${msg}"></div>
+        <div class="card bg-secondary text-light">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4"><i class="bi bi-door-open-fill"></i> Login</h2>
+            <form method="post" action="/login">
+              <div class="mb-3">
+                <label for="username" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="username" name="username" placeholder="Inserisci email" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Inserisci password" required>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> <strong>Accedi</strong></button>
+              </div>
+			  <div class="text-center mt-3">
+			    <p>Non hai un account? <a href="/register" class="link-light">Registrati</a></p>
+			  </div>
+            </form>
+            <hr class="my-3">
+            <div class="text-center">
+              <p>OPPURE</p>
+              <a href="/oauth2/authorization/amazon" class="btn btn-warning w-100"><i class="bi bi-amazon"></i> &nbsp&nbsp&nbsp&nbsp<strong>Accedi con Amazon</strong></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

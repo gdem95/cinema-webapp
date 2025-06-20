@@ -39,8 +39,8 @@ Il microservizio si occupa anche di fornire degli endpoint API REST, con i quali
    - In Eclipse IDE, dalla barra in alto selezionare **"File"** > **"Import..."** > **"General"** > **"Project from Folder or Archive"** 
    - Selezionare la directory del repository clonato e fare clic su **"Finish"**
 3. Creare database e db user eseguendo il file **createdb.sql** tramite **MySQL Command Line Client**:
-   - Aprire il file **createdb.sql** con un editor di testo e impostare una password al posto di **'[YOUR_PASSWORD]'**
-   - Aprire **MySQL Command Line CLient** e importare il file **createdb.sql** con l'istruzione:
+   - Aprire il file **createdb.sql** con un editor di testo e impostare una password al posto di **'[YOUR_PASSWORD]'**. Salvare il file.
+   - Aprire **MySQL Command Line Client** e importare il file **createdb.sql** con l'istruzione:
 ```bash
 source C:\[TUO_PERCORSO]\createdb.sql
 ```
